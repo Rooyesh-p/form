@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="styles.css" rel="stylesheet"/>
+<title>رویش</title>
+<style>
+/* اضافه کردن انیمیشن و طراحی خوش‌آمدگویی */
+#welcome-logo {
+  width: 140px;
+  max-width: 50%;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#welcome-page {
+  background: linear-gradient(135deg, #e0c3fc, #8ec5fc); /* یاسی تا آبی روشن */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #2e003e;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+  padding: 30px;
+}
+
+#welcome-page h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+#welcome-page p {
+  font-size: 20px;
+  margin: 10px 0;
+  max-width: 600px;
+  line-height: 1.8;
+}
+
+#welcome-page button {
+  margin-top: 30px;
+  padding: 12px 40px;
+  font-size: 20px;
+  background-color: #004D40;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#welcome-page button:hover {
+  background-color: #00695C;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* پس‌زمینه پزشکی برای فرم */
+#form-page {
+  position: relative;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background-color: #f7f9fc;
+  overflow: hidden;
+}
+
+#form-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('form-bg.png');
+background-repeat: repeat;
+background-size: 200px;
+background-position: center;
+  opacity: 0.3;
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+
+#form-page h1 {
+  text-align: center;
+  color: #004D40;
+}
+
+#form-page p {
+  text-align: center;
+  color: #00695C;
+}
+
+form {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+    @font-face {
+      font-family: 'BNazanin';
+      src: url('BNazanin.woff') format('woff');
+    }
+
+    body {
+      font-family: 'BNazanin', Tahoma, sans-serif;
+      direction: rtl;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- صفحه خوش‌آمدگویی -->
+  <div id="welcome-page" style="text-align: center; padding: 40px;">
+<img src="logo.png" alt="لوگوی رویش" id="welcome-logo" />
+    <h1>به رویــــــــش خوش اومدی!</h1>
+    <p style="font-size: 20px; margin-top: 20px;">
+      تا حالا شده حس کنی نمی‌دونی زمان مناسب بچه‌دار شدن کیه؟<br/>
+      یا بترسی که نکنه دیر بشه...
+    </p>
+    <p style="font-size: 18px; margin-top: 20px;">
+      ما اینجاییم تا بهت کمک کنیم بدون ترس و فشار، انتخاب درست خودتو پیدا کنی.<br/>
+      چون فقط یه نفره که باید واقعاً تصمیم بگیره و اون خود تویی.
+    </p>
+    <p style="font-size: 18px; margin-top: 20px;">
+      فقط به چند تا سؤال ساده جواب بده،<br/>
+      و پادکستی بشنو که از دل ذهن خودت درباره باروری ساخته شده.
+    </p>
+    <p style="font-size: 18px; margin-top: 20px;">
+      آماده‌ای آینده‌تو واضح‌تر ببینی؟
+    </p>
+    <p style="color: gray; font-size: 16px; margin-top: 30px;">
+      اطلاعاتت محرمانه باقی خواهد ماند و هیچ قضاوتی در کار نیست.
+    </p>
+    <button onclick="enterSite()" style="margin-top: 30px; padding: 10px 30px; font-size: 18px; background-color: #4CAF50; color: white; border: none; border-radius: 8px; cursor: pointer;">شروع کن</button>
+  </div>
+ <!-- فرم اصلی -->
+  <div id="form-page" style="display: none;">
+<div id="form-bg"></div>
+<h1 id="title">رویـــــــــش (نسخه بتا)</h1>
+<p id="description">«روایــت واگــویــــه‌هـــای یـــــک شـــخـص»</p>
+<form id="survey-form">
+<fieldset>
+<label for="name">نام و نام خانوادگی:</label>
+<input id="name" placeholder="نام خود را وارد کنید" required="" type="text"/>
+<label for="email">ایمیل:</label>
+<input id="email" placeholder="ایمیل خود را وارد کنید" required="" type="email"/>
+<label for="number">سن:</label>
+<input id="number" max="120" min="18" placeholder="سن خود را وارد کنید" required="" type="number"/><label for="province">استان:</label><input id="province" name="province" placeholder="مثلاً تهران" required="True" type="text"/><label for="city">شهر:</label><input id="city" name="city" placeholder="مثلاً شهریار" required="True" type="text"/>
+<label for="dropdown">جنسیت:</label>
+<select id="dropdown" required="">
+<option value="">(انتخاب کنید)</option>
+<option value="1">مرد</option>
+<option value="2">زن</option>
+</select>
+<label for="marriage">وضعیت تأهل:</label><select id="marriage" name="marriage" required="True"><option value="">(انتخاب کنید)</option><option value="single">مجرد</option><option value="married">متأهل</option><option value="divorced">مطلقه</option></select><label for="fertility_problem">سابقه مشکلات باروری در خانواده:</label><select id="fertility_problem" name="fertility_problem" required="True"><option value="">(انتخاب کنید)</option><option value="yes">بله</option><option value="no">خیر</option></select>
+<label for="height">قد (سانتی‌متر):</label>
+<input id="height" max="250" min="50" placeholder="مثلاً 170" required="" type="number"/>
+<label for="weight">وزن (کیلوگرم):</label>
+<input id="weight" max="250" min="20" placeholder="مثلاً 65" required="" type="number"/>
+<label for="bmi">شاخص توده بدنی (BMI):</label>
+<input id="bmi" placeholder="محاسبه می‌شود..." readonly="" style="background-color:#f0f0f0;" type="text"/>
+<label for="field">رشته:</label>
+<input id="field" placeholder="مثلاً پزشکی" required="" type="text"/>
+<label for="education">سطح تحصیلات:</label>
+<input id="education" placeholder="مثلاً کارشناسی ارشد" required="" type="text"/>
+<label for="character">ویژگی های بارز اخلاقی:</label>
+<input id="character" placeholder="به عنوان مثال: کمال‌گرا، مضطرب، اجتماعی..." required="" rows="2"/>
+<h3>ویژگی اقتصادی</h3>
+<label for="job">شاغل هستید؟</label><select id="job" name="job" required="True"><option value="">(انتخاب کنید)</option><option value="yes">هستم</option><option value="no">نیستم</option></select><label for="has_income">آیا درآمد دارید؟</label><select id="has_income" name="has_income" required="True"><option value="">(انتخاب کنید)</option><option value="yes">دارم</option><option value="no">ندارم</option></select>
+<label for="salary">حقوق ماهیانه (تومان):</label>
+<input id="salary" min="0" placeholder="مثلاً ۱۰٬۰۰۰٬۰۰۰" required="" type="number"/>
+<h3>موانع باروری</h3>
+<label for="barrier_work">کاری:</label>
+<input id="barrier_work" placeholder="مثلاً چالش‌های محیط کار..." rows="2"/>
+<label for="barrier_mental">روانی:</label>
+<input id="barrier_mental" placeholder="مثلاً ترس‌ها و نگرانی‌های دوران باروری..." rows="2"/>
+<label for="barrier_health">سلامتی:</label>
+<input id="barrier_health" placeholder="مثلاً مشکلات پزشکی، بیماری خاص..." rows="2"/>
+<label for="barrier_social">اجتماعی:</label>
+<input id="barrier_social" placeholder="مثلاً فشار خانواده یا جامعه..." rows="2"/>
+<label for="has_motivation">انگیزه برای فرزندآوری:</label><select id="has_motivation" name="has_motivation" required="True"><option value="">(انتخاب کنید)</option><option value="yes">دارم</option><option value="no">ندارم</option></select>
+<label for="motivation_bio">بیولوژیک:</label>
+<input id="motivation_bio" placeholder="مثلاً کاهش کیفیت باروری با افزایش سن..." rows="2"/>
+<label for="motivation_social">اجتماعی:</label>
+<input id="motivation_social" placeholder="مثلاً ایفای نقش اجتماعی پدر یا مادر..." rows="2"/>
+<label for="motivation_cultural">فرهنگی:</label>
+<input id="motivation_cultural" placeholder="مثلاً حفظ اصالت خانوادگی..." rows="2"/>
+<label for="motivation_religious">مذهبی:</label>
+<input id="motivation_religious" placeholder="مثلاً توصیه دینی، ثواب..." rows="2"/>
+</fieldset>
+<input id="submit" type="submit" value="ارسال"/>
+</form>
+</div>
+<script>
+
+ function enterSite() {
+      document.getElementById("welcome-page").style.display = "none";
+      document.getElementById("form-page").style.display = "block";
+    }
+
+    function calculateBMI() {
+      const height = parseFloat(document.getElementById("height").value);
+      const weight = parseFloat(document.getElementById("weight").value);
+      const bmiField = document.getElementById("bmi");
+
+      if (height > 0 && weight > 0) {
+        const bmi = weight / Math.pow(height / 100, 2);
+        bmiField.value = bmi.toFixed(2);
+      } else {
+        bmiField.value = "";
+      }
+    }
+
+    document.getElementById("height").addEventListener("input", calculateBMI);
+    document.getElementById("weight").addEventListener("input", calculateBMI);
+
+document.getElementById("survey-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  
+  // ارسال داده‌ها به سرور (اگر نیاز بود اینجا اضافه میشه)
+
+  // انتقال به صفحه تشکر
+  window.location.href = "thankyou.html";
+});
+
+
+  
+function toggleSalary(enabled) {
+  const salaryField = document.getElementById("salary");
+  if (enabled) {
+    salaryField.disabled = false;
+  } else {
+    salaryField.disabled = true;
+    salaryField.value = 0;
+  }
+}
+
+</script>
+</body>
+</html>
