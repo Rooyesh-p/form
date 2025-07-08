@@ -79,7 +79,7 @@
   height: 100%;
   background-image: url('form-bg.png');
 background-repeat: repeat;
-background-size: 200px;
+background-size: 300px;
 background-position: center;
   opacity: 0.3;
   z-index: 0;
@@ -113,6 +113,34 @@ form {
       font-family: 'BNazanin';
       src: url('BNazanin.woff') format('woff');
     }
+
+.form-header {
+  background-color: #ffffff; /* سفید توپُر */
+  border: 2px solid #26A69A; /* مرز سبز پزشکی */
+  padding: 30px 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  font-family: 'BNazanin', Tahoma, sans-serif;
+  z-index: 2;
+  position: relative;
+}
+
+.form-header h1 {
+  font-size: 40px;
+  color: #004D40;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.form-header p {
+  font-size: 20px;
+  color: #00695C;
+  margin: 0;
+  font-style: italic;
+}
 
     body {
       font-family: 'BNazanin', Tahoma, sans-serif;
@@ -153,8 +181,10 @@ form {
  <!-- فرم اصلی -->
   <div id="form-page" style="display: none;">
 <div id="form-bg"></div>
-<h1 id="title">رویـــــــــش (نسخه بتا)</h1>
-<p id="description">«روایــت واگــویــــه‌هـــای یـــــک شـــخـص»</p>
+<div class="form-header">
+  <h1 id="title">رویـــــــــش (نسخه بتا)</h1>
+  <p id="description">«روایــت واگــویــــه‌هـــای یـــــک شـــخـص»</p>
+</div>
 <form id="survey-form">
 <fieldset>
 <label for="name">نام و نام خانوادگی:</label>
