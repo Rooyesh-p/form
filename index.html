@@ -307,21 +307,22 @@ document.getElementById("survey-form").addEventListener("submit", function(e) {
     motivation_religious: document.getElementById("motivation_religious").value,
   };
 
-  fetch("https://script.google.com/macros/s/AKfycbw0NtHO1XKsic03e2NrD_grCirH7vfLtVynvnbFNElHKAK7hXfMBsbx8LlbHPuUIsqrLA/exec", {
+  fetch("https://api.sheetbest.com/sheets/b9dbf344-4b28-4dfe-8987-b1b23b9aed54", {
     method: "POST",
-    body: JSON.stringify(formData),
     headers: {
       "Content-Type": "application/json"
-    }
+    },
+    body: JSON.stringify(formData)
   })
   .then(response => {
     window.location.href = "thankyou.html";
   })
   .catch(error => {
-    alert("خطا در ارسال فرم. لطفاً دوباره امتحان کنید.");
+    alert("خطا در ارسال فرم. لطفاً دوباره تلاش کنید.");
     console.error("Error:", error);
   });
 });
+
 
 
 
