@@ -308,16 +308,19 @@ document.getElementById("survey-form").addEventListener("submit", function(e) {
   };
 
   fetch("https://api.sheetbest.com/sheets/b9dbf344-4b28-4dfe-8987-b1b23b9aed54", {
-    method: "POST",
-    body: JSON.stringify(formData)
-  })
-  .then(response => {
-    window.location.href = "thankyou.html";
-  })
-  .catch(error => {
-    alert("خطا در ارسال فرم. لطفاً دوباره تلاش کنید.");
-    console.error("Error:", error);
-  });
+  method: "POST",
+  mode: "no-cors",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(formData)
+})
+.then(() => {
+  window.location.href = "thankyou.html";
+})
+.catch(error => {
+  alert("خطا در ارسال فرم. لطفاً دوباره تلاش کنید.");
+  console.error("Error:", error);
 });
 
 
