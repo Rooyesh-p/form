@@ -309,9 +309,6 @@ document.getElementById("survey-form").addEventListener("submit", function(e) {
 
   fetch("https://api.sheetbest.com/sheets/b9dbf344-4b28-4dfe-8987-b1b23b9aed54", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
     body: JSON.stringify(formData)
   })
   .then(response => {
