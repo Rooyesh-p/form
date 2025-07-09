@@ -199,55 +199,65 @@ form {
   <h1 class="form-title">رویــــش (نسخه بتا)</h1>
   <p class="form-subtitle">«روایــت واگــویــــه‌هـــای یـــــک شـــخـص»</p>
 </div>
-<form id="survey-form">
+<form id="survey-form" 
+      action="https://docs.google.com/forms/d/e/1FAIpQLSdl9HDI0SkaCqEJteYr82stlszJp2O5wjLTBLX0m8-CvVKkqQ/formResponse" 
+      method="POST" 
+      target="_self" 
+      onsubmit="setTimeout(() => window.location.href='thankyou.html', 1000)">
 <fieldset>
 <label for="name">نام و نام خانوادگی:</label>
-<input id="name" placeholder="نام خود را وارد کنید" required="" type="text"/>
+<input id="name" name="entry.671021038" placeholder="نام خود را وارد کنید" required="" type="text"/>
 <label for="email">ایمیل:</label>
-<input id="email" placeholder="ایمیل خود را وارد کنید" required="" type="email"/>
+<input id="email" name="entry.963970650" placeholder="ایمیل خود را وارد کنید" required="" type="email"/>
 <label for="number">سن:</label>
-<input id="number" max="120" min="18" placeholder="سن خود را وارد کنید" required="" type="number"/><label for="province">استان:</label><input id="province" name="province" placeholder="مثلاً تهران" required="True" type="text"/><label for="city">شهر:</label><input id="city" name="city" placeholder="مثلاً شهریار" required="True" type="text"/>
+<input id="number" name="entry.1380727761" max="120" min="18" placeholder="سن خود را وارد کنید" required="" type="number"/>
+<label for="province">استان:</label>
+<input id="province" name="entry.32694057" placeholder="مثلاً تهران" required="True" type="text"/>
+<label for="city">شهر:</label>
+<input id="city" name="entry.265158899" placeholder="مثلاً شهریار" required="True" type="text"/>
 <label for="dropdown">جنسیت:</label>
-<select id="dropdown" required="">
+<select id="dropdown" name="entry.1141906361" required="">
 <option value="">(انتخاب کنید)</option>
 <option value="1">مرد</option>
 <option value="2">زن</option>
 </select>
-<label for="marriage">وضعیت تأهل:</label><select id="marriage" name="marriage" required="True"><option value="">(انتخاب کنید)</option><option value="single">مجرد</option><option value="married">متأهل</option><option value="divorced">مطلقه</option></select><label for="fertility_problem">سابقه مشکلات باروری در خانواده:</label><select id="fertility_problem" name="fertility_problem" required="True"><option value="">(انتخاب کنید)</option><option value="yes">بله</option><option value="no">خیر</option></select>
+<label for="marriage">وضعیت تأهل:</label><select id="marriage" name="entry.362038519" required="True"><option value="">(انتخاب کنید)</option><option value="single">مجرد</option><option value="married">متأهل</option><option value="divorced">مطلقه</option></select>
+<label for="fertility_problem">سابقه مشکلات باروری در خانواده:</label><select id="fertility_problem" name="entry.445464387" required="True"><option value="">(انتخاب کنید)</option><option value="yes">بله</option><option value="no">خیر</option></select>
 <label for="height">قد (سانتی‌متر):</label>
-<input id="height" max="250" min="50" placeholder="مثلاً 170" required="" type="number"/>
+<input id="height" name="entry.2109493211" max="250" min="50" placeholder="مثلاً 170" required="" type="number"/>
 <label for="weight">وزن (کیلوگرم):</label>
-<input id="weight" max="250" min="20" placeholder="مثلاً 65" required="" type="number"/>
+<input id="weight" name="entry.979395343" max="250" min="20" placeholder="مثلاً 65" required="" type="number"/>
 <label for="bmi">شاخص توده بدنی (BMI):</label>
-<input id="bmi" placeholder="محاسبه می‌شود..." readonly="" style="background-color:#f0f0f0;" type="text"/>
+<input id="bmi" name="entry.1819996788" placeholder="محاسبه می‌شود..." readonly="" style="background-color:#f0f0f0;" type="text"/>
 <label for="field">رشته:</label>
-<input id="field" placeholder="مثلاً پزشکی" required="" type="text"/>
+<input id="field" name="entry.336725991" placeholder="مثلاً پزشکی" required="" type="text"/>
 <label for="education">سطح تحصیلات:</label>
-<input id="education" placeholder="مثلاً کارشناسی ارشد" required="" type="text"/>
+<input id="education" name="entry.1324788976" placeholder="مثلاً کارشناسی ارشد" required="" type="text"/>
 <label for="character">ویژگی های بارز اخلاقی:</label>
-<input id="character" placeholder="به عنوان مثال: کمال‌گرا، مضطرب، اجتماعی..." required="" rows="2"/>
+<input id="character" name="entry.1652896522" placeholder="به عنوان مثال: کمال‌گرا، مضطرب، اجتماعی..." required="" rows="2"/>
 <h3>ویژگی اقتصادی</h3>
-<label for="job">شاغل هستید؟</label><select id="job" name="job" required="True"><option value="">(انتخاب کنید)</option><option value="yes">هستم</option><option value="no">نیستم</option></select><label for="has_income">آیا درآمد دارید؟</label><select id="has_income" name="has_income" required="True"><option value="">(انتخاب کنید)</option><option value="yes">دارم</option><option value="no">ندارم</option></select>
+<label for="job">شاغل هستید؟</label><select id="job" name="entry.1235697308" required="True"><option value="">(انتخاب کنید)</option><option value="yes">هستم</option><option value="no">نیستم</option></select>
+<label for="has_income">آیا درآمد دارید؟</label><select id="has_income" name="entry.2023739351" required="True"><option value="">(انتخاب کنید)</option><option value="yes">دارم</option><option value="no">ندارم</option></select>
 <label for="salary">حقوق ماهیانه (تومان):</label>
-<input id="salary" min="0" placeholder="مثلاً ۱۰٬۰۰۰٬۰۰۰" required="" type="number"/>
+<input id="salary" name="entry.346125084" min="0" placeholder="مثلاً ۱۰٬۰۰۰٬۰۰۰" required="" type="number"/>
 <h3>موانع باروری</h3>
 <label for="barrier_work">کاری:</label>
-<input id="barrier_work" placeholder="مثلاً چالش‌های محیط کار..." rows="2"/>
+<input id="barrier_work" name="entry.1723580403" placeholder="مثلاً چالش‌های محیط کار..." rows="2"/>
 <label for="barrier_mental">روانی:</label>
-<input id="barrier_mental" placeholder="مثلاً ترس‌ها و نگرانی‌های دوران باروری..." rows="2"/>
+<input id="barrier_mental" name="entry.627456335" placeholder="مثلاً ترس‌ها و نگرانی‌های دوران باروری..." rows="2"/>
 <label for="barrier_health">سلامتی:</label>
-<input id="barrier_health" placeholder="مثلاً مشکلات پزشکی، بیماری خاص..." rows="2"/>
+<input id="barrier_health" name="entry.928130667" placeholder="مثلاً مشکلات پزشکی، بیماری خاص..." rows="2"/>
 <label for="barrier_social">اجتماعی:</label>
-<input id="barrier_social" placeholder="مثلاً فشار خانواده یا جامعه..." rows="2"/>
-<label for="has_motivation">انگیزه برای فرزندآوری:</label><select id="has_motivation" name="has_motivation" required="True"><option value="">(انتخاب کنید)</option><option value="yes">دارم</option><option value="no">ندارم</option></select>
+<input id="barrier_social" name="entry.1765139418" placeholder="مثلاً فشار خانواده یا جامعه..." rows="2"/>
+<label for="has_motivation">انگیزه برای فرزندآوری:</label><select id="has_motivation" name="entry.329292296" required="True"><option value="">(انتخاب کنید)</option><option value="yes">دارم</option><option value="no">ندارم</option></select>
 <label for="motivation_bio">بیولوژیک:</label>
-<input id="motivation_bio" placeholder="مثلاً کاهش کیفیت باروری با افزایش سن..." rows="2"/>
+<input id="motivation_bio" name="entry.1712181293" placeholder="مثلاً کاهش کیفیت باروری با افزایش سن..." rows="2"/>
 <label for="motivation_social">اجتماعی:</label>
-<input id="motivation_social" placeholder="مثلاً ایفای نقش اجتماعی پدر یا مادر..." rows="2"/>
+<input id="motivation_social" name="entry.894681872" placeholder="مثلاً ایفای نقش اجتماعی پدر یا مادر..." rows="2"/>
 <label for="motivation_cultural">فرهنگی:</label>
-<input id="motivation_cultural" placeholder="مثلاً حفظ اصالت خانوادگی..." rows="2"/>
+<input id="motivation_cultural" name="entry.1696540866" placeholder="مثلاً حفظ اصالت خانوادگی..." rows="2"/>
 <label for="motivation_religious">مذهبی:</label>
-<input id="motivation_religious" placeholder="مثلاً توصیه دینی، ثواب..." rows="2"/>
+<input id="motivation_religious" name="entry.1120377727" placeholder="مثلاً توصیه دینی، ثواب..." rows="2"/>
 </fieldset>
 <input id="submit" type="submit" value="ارسال"/>
 </form>
@@ -277,56 +287,6 @@ form {
   // وصل‌کردن BMI به ورودی‌ها
   document.getElementById("height").addEventListener("input", calculateBMI);
   document.getElementById("weight").addEventListener("input", calculateBMI);
-
-  // ارسال فرم
-  document.getElementById("survey-form").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const formData = {
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      age: document.getElementById("number").value,
-      province: document.getElementById("province").value,
-      city: document.getElementById("city").value,
-      gender: document.getElementById("dropdown").value,
-      marriage: document.getElementById("marriage").value,
-      fertility_problem: document.getElementById("fertility_problem").value,
-      height: document.getElementById("height").value,
-      weight: document.getElementById("weight").value,
-      bmi: document.getElementById("bmi").value,
-      field: document.getElementById("field").value,
-      education: document.getElementById("education").value,
-      character: document.getElementById("character").value,
-      job: document.getElementById("job").value,
-      has_income: document.getElementById("has_income").value,
-      salary: document.getElementById("salary").value,
-      barrier_work: document.getElementById("barrier_work").value,
-      barrier_mental: document.getElementById("barrier_mental").value,
-      barrier_health: document.getElementById("barrier_health").value,
-      barrier_social: document.getElementById("barrier_social").value,
-      has_motivation: document.getElementById("has_motivation").value,
-      motivation_bio: document.getElementById("motivation_bio").value,
-      motivation_social: document.getElementById("motivation_social").value,
-      motivation_cultural: document.getElementById("motivation_cultural").value,
-      motivation_religious: document.getElementById("motivation_religious").value,
-    };
-
-    fetch("https://api.sheetbest.com/sheets/b9dbf344-4b28-4dfe-8987-b1b23b9aed54", {
-      method: "POST",
-      mode: "no-cors",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(formData)
-    })
-    .then(() => {
-      window.location.href = "thankyou.html";
-    })
-    .catch(error => {
-      alert("خطا در ارسال فرم. لطفاً دوباره تلاش کنید.");
-      console.error("Error:", error);
-    });
-  });
 
   // فعال/غیرفعال‌کردن فیلد حقوق
   function toggleSalary(enabled) {
